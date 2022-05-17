@@ -1,0 +1,31 @@
+div > .header-principal {
+  background-color: bisque;
+}
+
+.logo {
+  width: 200px;
+  margin-left: 30px;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.listaNav {
+  width: 80%;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+ul > li {
+  margin: 0px 20px 0px 20px;
+}
+
+div > .btm-nav,
+li > .btm-nav {
+  color: black;
+  font-weight: 500;
+}
