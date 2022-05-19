@@ -1,8 +1,9 @@
 import "./NavBar.css";
-import * as React from "react";
+import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
+import CartWidget from "../CartWidget/CartWidget";
 
 // UpperCamelCase
 const NavBar = () => {
@@ -12,8 +13,8 @@ const NavBar = () => {
         <div className="logo">
           <img src="./logo_navBar.png" alt="logo" />
         </div>
-        <div className="listaNav">
-          <ul className="lista">
+        <div className="listNav">
+          <ul className="list">
             <li>
               <Button className="btm-nav" variant="text" size="medium">
                 Inicio
@@ -31,7 +32,7 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-        <Button className="btm-nav">Login</Button>
+        <CartWidget />
       </Toolbar>
     </AppBar>
   );
