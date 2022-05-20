@@ -1,31 +1,7 @@
-div > .header-principal {
-  background-color: bisque;
+a > img{
+  width: 150px;
 }
 
-.logo {
-  width: 170px;
-  margin-left: 30px;
-}
-
-.logo img {
-  width: 100%;
-}
-
-.listNav {
-  width: 80%;
-}
-
-ul {
-  display: flex;
-  list-style-type: none;
-}
-
-ul > li {
-  margin: 0px 20px 0px 20px;
-}
-
-div > .btm-nav,
-li > .btm-nav {
-  color: black;
-  font-weight: 500;
+.cartWidget{
+  right: 15px;
 }

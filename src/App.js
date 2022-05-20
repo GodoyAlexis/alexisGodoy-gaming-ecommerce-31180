@@ -1,8 +1,7 @@
 // import logo from './logo.svg';
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
-import CardList from "./components/CardList/CardList";
-
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 // or less ideally
 
@@ -10,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <CardList title={"Leggins"}/>
+      <ItemListContainer title={"Leggins"} />
     </div>
   );
 }

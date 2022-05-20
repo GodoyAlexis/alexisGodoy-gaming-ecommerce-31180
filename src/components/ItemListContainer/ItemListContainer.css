@@ -1,0 +1,28 @@
+.title {
+  margin-top: 30px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px pink;
+}
+
+@media (max-width: 1400px) and (min-width: 984px) {
+  div > .colCard {
+    display: flex;
+    width: 33.33333333%;
+    padding: 0px;
+  }
+}
+
+@media (max-width: 984px) {
+  div > .colCard {
+    display: flex;
+    width: 50%;
+    padding: 0px;
+  }
+}
+@media (max-width: 644px) {
+  div > .colCard {
+    display: flex;
+    width: 100%;
+    padding: 0px;
+  }
+}
