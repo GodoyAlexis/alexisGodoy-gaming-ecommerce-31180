@@ -19,6 +19,7 @@
     padding: 0px;
   }
 }
+
 @media (max-width: 644px) {
   div > .colCard {
     display: flex;
