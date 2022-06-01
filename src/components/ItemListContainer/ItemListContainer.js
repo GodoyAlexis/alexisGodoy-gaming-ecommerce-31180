@@ -1,7 +1,7 @@
 import "./ItemListContainer.css";
 import { useState, useEffect } from "react";
-import inventaryLeggins from "../../utils/inventaryListLeggins";
 import ItemList from "../ItemList/ItemList";
+import { inventaryLeggins } from "../../utils/inventaryListLeggins";
 
 const ItemListContainer = ({ title }) => {
   const [stock, setStock] = useState([]);

@@ -39,4 +39,16 @@ const inventaryLeggins = [
   { title: "Toucan", price: 8740, image: "TOUCAN.jpg", stock: 6, id: 8 },
 ];
 
-export default inventaryLeggins;
+const leggin = {
+  title: "Herradura",
+  price: 8740,
+  image: "HERRADURA.jpg",
+  image2: "HERRADURA2.jpg",
+  image3: "HERRADURA3.jpg",
+  image4: "HERRADURA4.jpg",
+  image5: "HERRADURA5.jpg",
+  stock: 3,
+  id: 5
+};
+
+export { inventaryLeggins, leggin };
