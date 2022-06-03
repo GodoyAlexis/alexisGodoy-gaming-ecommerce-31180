@@ -1,7 +1,9 @@
+import "./ItemList.css";
 import { Container, Row, Col } from "react-bootstrap";
 import Item from "../Item/Item";
 
 const ItemList = (props) => {
+  console.log(props.stock);
   return (
     <>
       <h2 className="title">{props.title}</h2>

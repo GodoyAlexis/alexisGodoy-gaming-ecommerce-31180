@@ -68,3 +68,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+Nombre del proyecto: Style Sport.
+
+Estado del proyecto: En progreso..
+
+Librerias utilizadas: react-bootstrap.
+
+Informacion sobre el proyecto: Somos una tienda de ropa deportiva femenina, en la cual resaltamos por la buena calidad y por la gran variedad de productos, para todos los talles.
+
+Indicaciones para utilizar la app:  °En el inicio tienes un banner.
+                                    °Luego puedes interactuar con el boton productos y se abrira un dropdown para que selecciones el tipo de producto que quieres ver.
+                                    °Al estar cargada la lista de productos que seleccionaste puedes ver los detalles del producto que prefieras interactuando con el boton de detalles.
+                                    °Tienes un contador para que selecciones la cantidad de productos que requieras.

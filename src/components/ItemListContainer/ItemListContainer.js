@@ -1,14 +1,14 @@
 import "./ItemListContainer.css";
 import { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
-import { inventaryLeggins } from "../../utils/inventaryListLeggins";
+import inventaryProducts from "../../utils/inventaryProducts";
 
 const ItemListContainer = ({ title }) => {
   const [stock, setStock] = useState([]);
   const getInventary = () => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve(inventaryLeggins);
+        resolve(inventaryProducts);
       }, 2000);
     });
   };

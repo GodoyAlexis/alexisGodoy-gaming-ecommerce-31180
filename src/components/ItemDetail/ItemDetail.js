@@ -13,23 +13,20 @@ const ItemDetail = ({ product }) => {
             <Row>
               <Col md={2}>
                 <Row>
-                  <Card.Img variant="top" src={`./${image}`} />
+                  <Card.Img variant="top" src={`../${image}`} />
                 </Row>
                 <Row style={{ marginTop: "12px" }}>
-                  <Card.Img variant="top" src={`./${image2}`} />
+                  <Card.Img variant="top" src={`../${image2}`} />
                 </Row>
                 <Row style={{ marginTop: "12px" }}>
-                  <Card.Img variant="top" src={`./${image3}`} />
+                  <Card.Img variant="top" src={`../${image3}`} />
                 </Row>
                 <Row style={{ marginTop: "12px" }}>
-                  <Card.Img variant="top" src={`./${image4}`} />
-                </Row>
-                <Row style={{ marginTop: "12px" }}>
-                  <Card.Img variant="top" src={`./${image5}`} />
+                  <Card.Img variant="top" src={`../${image4}`} />
                 </Row>
               </Col>
               <Col md={10}>
-                <Card.Img variant="top" src={`./${image}`} />
+                <Card.Img variant="top" src={`../${image}`} />
               </Col>
             </Row>
           </Col>
@@ -42,11 +39,11 @@ const ItemDetail = ({ product }) => {
             </div>
             <div className="containerDues">
               <h4>Envio Gratis</h4>
-              <h5>3 cuotas sin interes de $2.913</h5>
-              <h5>6 cuotas sin interes de $1.457</h5>
-              <h5>12 cuotas sin interes de $728</h5>
+              <h5>3 cuotas sin interes de ${Math.round(price / 3)}</h5>
+              <h5>6 cuotas sin interes de ${Math.round(price / 6)}</h5>
+              <h5>12 cuotas sin interes de ${Math.round(price / 12)}</h5>
             </div>
-            <div className="containerCount" style={{ marginTop: "20px" }}>
+            <div className="containerFooter" style={{ marginTop: "20px" }}>
               <ItemCount stock={stock}></ItemCount>
               <Button className="buttonAgregar" variant="info">
                 Agregar al carrito
