@@ -1,16 +1,42 @@
-import "./ItemCount.css"
-import { useState } from "react";
-import { Button } from "react-bootstrap"
+import "./ItemCount.css";
 
-const ItemCount = ({stock}) => {
-    const [count, setCount] = useState(1)
-    return(
-        <div className="containerCount">
-            <Button variant="outline-info" onClick={()=>{if(count > 1){setCount(count - 1)}}}>-</Button>
-            <p className="countSelected">{count}</p>
-            <Button variant="outline-info" onClick={()=>{if(count <= stock){setCount(count + 1)}}}>+</Button>
-        </div>
-    )
-}
+import { Button } from "react-bootstrap";
+
+const ItemCount = ({ stock, setQuantity, quantity, setShowButton }) => {
+  return (
+    <div className="containerCount">
+      <Button
+        variant="outline-info"
+        onClick={() => {
+          if (quantity > 1) {
+            setQuantity(quantity - 1);
+          }
+        }}
+      >
+        -
+      </Button>
+      <p className="countSelected">{quantity}</p>
+      <Button
+        variant="outline-info"
+        onClick={() => {
+          if (quantity <= stock) {
+            setQuantity(quantity + 1);
+          }
+        }}
+      >
+        +
+      </Button>
+      <Button
+        className="buttonAgregar"
+        variant="info"
+        onClick={() => {
+          setShowButton(true);
+        }}
+      >
+        Agregar al carrito
+      </Button>
+    </div>
+  );
+};
 
 export default ItemCount;

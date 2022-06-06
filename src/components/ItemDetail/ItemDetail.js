@@ -1,10 +1,16 @@
 import "./ItemDetail.css";
 import { Col, Container, Row, Card, Button } from "react-bootstrap";
 import ItemCount from "../ItemCount/ItemCount";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ product }) => {
-  const { image, title, price, stock, image2, image3, image4, image5 } =
-    product;
+  const { image, title, price, stock, image2, image3, image4 } = product;
+
+  const [quantity, setQuantity] = useState(1);
+
+  const [showButton, setShowButton] = useState(false);
+
   return (
     <div>
       <Container>
@@ -43,12 +49,22 @@ const ItemDetail = ({ product }) => {
               <h5>6 cuotas sin interes de ${Math.round(price / 6)}</h5>
               <h5>12 cuotas sin interes de ${Math.round(price / 12)}</h5>
             </div>
-            <div className="containerFooter" style={{ marginTop: "20px" }}>
-              <ItemCount stock={stock}></ItemCount>
-              <Button className="buttonAgregar" variant="info">
-                Agregar al carrito
-              </Button>
-            </div>
+            {!showButton ? (
+              <div className="containerFooter" style={{ marginTop: "20px" }}>
+                <ItemCount
+                  stock={stock}
+                  setQuantity={setQuantity}
+                  quantity={quantity}
+                  setShowButton={setShowButton}
+                ></ItemCount>
+              </div>
+            ) : (
+              <div>
+                <Button variant="info" className="text-white">
+                  <Link className="text-white" style={{textDecoration: "none"}} to="/cart">Finalizar compra</Link>
+                </Button>
+              </div>
+            )}
           </Col>
         </Row>
       </Container>
