@@ -1,8 +1,18 @@
 import "./ItemCount.css";
 
 import { Button } from "react-bootstrap";
+import CartContext from "../../context/CartContext";
+import { useContext } from "react";
 
-const ItemCount = ({ stock, setQuantity, quantity, setShowButton }) => {
+const ItemCount = ({
+  stock,
+  setQuantity,
+  quantity,
+  setShowButton,
+  product,
+}) => {
+  const { addProductToCart } = useContext(CartContext);
+
   return (
     <div className="containerCount">
       <Button
@@ -31,6 +41,7 @@ const ItemCount = ({ stock, setQuantity, quantity, setShowButton }) => {
         variant="info"
         onClick={() => {
           setShowButton(true);
+          addProductToCart({ ...product, amount: quantity });
         }}
       >
         Agregar al carrito

@@ -6,26 +6,24 @@ import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import NotFound from "./pages/NotFound";
 import ProductCategory from "./pages/ProductCategory";
+import { CartProvider } from "./context/CartContext";
 
 // or less ideally
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-
-          <Route path="/" element={<Home />} />
-          <Route path="/product/:id" element={<Detail />}/>
-          <Route path="/products/:category" element={<ProductCategory />}/>
-          <Route path="*" element={<NotFound />}/>
-          
-
-        </Routes>
-      </BrowserRouter>
-      
-      
+      <CartProvider>
+        <BrowserRouter>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/product/:id" element={<Detail />} />
+            <Route path="/products/:category" element={<ProductCategory />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </CartProvider>
     </div>
   );
 }

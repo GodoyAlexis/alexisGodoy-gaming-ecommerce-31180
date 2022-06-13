@@ -2,6 +2,7 @@ const inventaryProducts = [
   {
     title: "Cotton Carbon",
     price: 7340,
+    amount: 1,
     image: "COTTONCARBON.jpg",
     image2: "COTTONCARBON2.jpg",
     image3: "COTTONCARBON3.jpg",
@@ -13,6 +14,7 @@ const inventaryProducts = [
   {
     title: "Cotton Black",
     price: 7340,
+    amount: 1,
     image: "COTTONBLACK.jpg",
     image2: "COTTONBLACK2.jpg",
     image3: "COTTONBLACK3.jpg",
@@ -24,6 +26,7 @@ const inventaryProducts = [
   {
     title: "Cotton Grey",
     price: 7340,
+    amount: 1,
     image: "COTTONGREY.jpg",
     image2: "COTTONGREY2.jpg",
     image3: "COTTONGREY3.jpg",
@@ -35,6 +38,7 @@ const inventaryProducts = [
   {
     title: "Cotton Navy",
     price: 7340,
+    amount: 1,
     image: "COTTONNAVY.jpg",
     image2: "COTTONNAVY2.jpg",
     image3: "COTTONNAVY3.jpg",
@@ -46,6 +50,7 @@ const inventaryProducts = [
   {
     title: "Herradura",
     price: 8740,
+    amount: 1,
     image: "HERRADURA.jpg",
     image2: "HERRADURA2.jpg",
     image3: "HERRADURA3.jpg",
@@ -57,6 +62,7 @@ const inventaryProducts = [
   {
     title: "Orchind",
     price: 8740,
+    amount: 1,
     image: "ORCHIND.jpg",
     image2: "ORCHIND2.jpg",
     image3: "ORCHIND3.jpg",
@@ -68,6 +74,7 @@ const inventaryProducts = [
   {
     title: "Saffron",
     price: 8740,
+    amount: 1,
     image: "SAFFRON.jpg",
     image2: "SAFFRON2.jpg",
     image3: "SAFFRON3.jpg",
@@ -79,6 +86,7 @@ const inventaryProducts = [
   {
     title: "Toucan",
     price: 8740,
+    amount: 1,
     image: "TOUCAN.jpg",
     image2: "TOUCAN2.jpg",
     image3: "TOUCAN3.jpg",
@@ -90,6 +98,7 @@ const inventaryProducts = [
   {
     title: "TOUCAN TOP",
     price: 5390,
+    amount: 1,
     image: "TOUCANTOP.jpg",
     image2: "TOUCANTOP2.jpg",
     image3: "TOUCANTOP3.jpg",
@@ -101,6 +110,7 @@ const inventaryProducts = [
   {
     title: "ORCHID TOP",
     price: 5390,
+    amount: 1,
     image: "ORCHINDTOP.jpg",
     image2: "ORCHINDTOP2.jpg",
     image3: "ORCHINDTOP3.jpg",
@@ -112,6 +122,7 @@ const inventaryProducts = [
   {
     title: "SAFFRON TOP",
     price: 5390,
+    amount: 1,
     image: "SAFFRONTOP.jpg",
     image2: "SAFFRONTOP2.jpg",
     image3: "SAFFRONTOP3.jpg",
@@ -123,6 +134,7 @@ const inventaryProducts = [
   {
     title: "HERRADURA TOP",
     price: 5390,
+    amount: 1,
     image: "HERRADURATOP.jpg",
     image2: "HERRADURATOP2.jpg",
     image3: "HERRADURATOP3.jpg",
@@ -134,6 +146,7 @@ const inventaryProducts = [
   {
     title: "PEACE TOP",
     price: 5390,
+    amount: 1,
     image: "PEACETOP.jpg",
     image2: "PEACETOP2.jpg",
     image3: "PEACETOP3.jpg",
@@ -145,6 +158,7 @@ const inventaryProducts = [
   {
     title: "ACE TOP",
     price: 5390,
+    amount: 1,
     image: "ACETOP.jpg",
     image2: "ACETOP2.jpg",
     image3: "ACETOP3.jpg",
@@ -156,6 +170,7 @@ const inventaryProducts = [
   {
     title: "SPEED TOP",
     price: 5390,
+    amount: 1,
     image: "SPEEDTOP.jpg",
     image2: "SPEEDTOP2.jpg",
     image3: "SPEEDTOP3.jpg",
@@ -167,6 +182,7 @@ const inventaryProducts = [
   {
     title: "LEOPARD TOP",
     price: 5390,
+    amount: 1,
     image: "LEOPARDTOP.jpg",
     image2: "LEOPARDTOP2.jpg",
     image3: "LEOPARDTOP3.jpg",

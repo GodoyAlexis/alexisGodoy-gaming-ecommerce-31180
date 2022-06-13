@@ -31,9 +31,7 @@ const ProductCategory = () => {
   }, [category]);
 
   const filterCategory = (array) => {
-      console.log("dentro de filter:" , array);
     return array.map( (item) => {
-        console.log("dentro de iarray:" , item);
       if (item.category == category) {
         return setStock((stock) => [...stock, item]);
       }
