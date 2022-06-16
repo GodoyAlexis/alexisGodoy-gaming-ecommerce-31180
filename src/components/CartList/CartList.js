@@ -10,7 +10,7 @@ const CartList = ({ product }) => {
   return (
     <Row className="cartList d-flex align-items-center" key={product.id}>
       <Col style={{width:"25%"}} className="mt-2">
-        <Card.Img variant="top" src={`/${product.image}`} />
+        <img src={`/${product.image}`} alt={`${product.title}`} style={{minWidth:"100%", maxHeight:"200px", objectFit:"contain"}} />
       </Col>
       <Col style={{width:"25%", display:"flex", flexDirection:"column" }}>
         <p className="info">{product.title}</p>
