@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import ProductCategory from "./pages/ProductCategory";
 import { CartProvider } from "./context/CartContext";
 import Cart from "./pages/Cart";
+import AllProducts from "./pages/AllProducts";
 
 // or less ideally
 
@@ -19,6 +20,7 @@ function App() {
           <NavBar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/allProducts" element={<AllProducts />} />
             <Route path="/product/:id" element={<Detail />} />
             <Route path="/products/:category" element={<ProductCategory />} />
             <Route path="/cart" element={<Cart />} />

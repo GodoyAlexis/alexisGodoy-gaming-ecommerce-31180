@@ -25,7 +25,7 @@ const CartWidget = () => {
         </Offcanvas.Header>
         <Offcanvas.Body>
           {cartListItems.map((cartItem) => {
-            return <CartList product={cartItem} />;
+            return <CartList product={cartItem} key={cartItem.id} />;
           })}
           {quantityCart !== 0 ? (
             <Button

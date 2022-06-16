@@ -9,6 +9,7 @@ const inventaryProducts = [
     image4: "COTTONCARBON4.jpg",
     stock: 5,
     category: "leggins",
+    type: "allProducts",
     id: 1,
   },
   {
@@ -21,6 +22,7 @@ const inventaryProducts = [
     image4: "COTTONBLACK4.jpg",
     stock: 3,
     category: "leggins",
+    type: "allProducts",
     id: 2,
   },
   {
@@ -33,6 +35,7 @@ const inventaryProducts = [
     image4: "COTTONGREY4.jpg",
     stock: 4,
     category: "leggins",
+    type: "allProducts",
     id: 3,
   },
   {
@@ -45,6 +48,7 @@ const inventaryProducts = [
     image4: "COTTONNAVY4.jpg",
     stock: 5,
     category: "leggins",
+    type: "allProducts",
     id: 4,
   },
   {
@@ -57,6 +61,7 @@ const inventaryProducts = [
     image4: "HERRADURA4.jpg",
     stock: 3,
     category: "leggins",
+    type: "allProducts",
     id: 5,
   },
   {
@@ -69,6 +74,7 @@ const inventaryProducts = [
     image4: "ORCHIND4.jpg",
     stock: 2,
     category: "leggins",
+    type: "allProducts",
     id: 6,
   },
   {
@@ -81,6 +87,7 @@ const inventaryProducts = [
     image4: "SAFFRON4.jpg",
     stock: 5,
     category: "leggins",
+    type: "allProducts",
     id: 7,
   },
   {
@@ -93,10 +100,11 @@ const inventaryProducts = [
     image4: "TOUCAN4.jpg",
     stock: 6,
     category: "leggins",
+    type: "allProducts",
     id: 8,
   },
   {
-    title: "TOUCAN TOP",
+    title: "Toucan Top",
     price: 5390,
     amount: 1,
     image: "TOUCANTOP.jpg",
@@ -105,10 +113,11 @@ const inventaryProducts = [
     image4: "TOUCANTOP4.jpg",
     stock: 4,
     category: "tops",
+    type: "allProducts",
     id: 9,
   },
   {
-    title: "ORCHID TOP",
+    title: "Orchid Top",
     price: 5390,
     amount: 1,
     image: "ORCHINDTOP.jpg",
@@ -117,10 +126,11 @@ const inventaryProducts = [
     image4: "ORCHINDTOP4.jpg",
     stock: 7,
     category: "tops",
+    type: "allProducts",
     id: 10,
   },
   {
-    title: "SAFFRON TOP",
+    title: "Saffron Top",
     price: 5390,
     amount: 1,
     image: "SAFFRONTOP.jpg",
@@ -129,10 +139,11 @@ const inventaryProducts = [
     image4: "SAFFRONTOP4.jpg",
     stock: 6,
     category: "tops",
+    type: "allProducts",
     id: 11,
   },
   {
-    title: "HERRADURA TOP",
+    title: "Herradura Top",
     price: 5390,
     amount: 1,
     image: "HERRADURATOP.jpg",
@@ -141,10 +152,11 @@ const inventaryProducts = [
     image4: "HERRADURATOP4.jpg",
     stock: 3,
     category: "tops",
+    type: "allProducts",
     id: 12,
   },
   {
-    title: "PEACE TOP",
+    title: "Peace Top",
     price: 5390,
     amount: 1,
     image: "PEACETOP.jpg",
@@ -153,10 +165,11 @@ const inventaryProducts = [
     image4: "PEACETOP4.jpg",
     stock: 7,
     category: "tops",
+    type: "allProducts",
     id: 13,
   },
   {
-    title: "ACE TOP",
+    title: "Ace Top",
     price: 5390,
     amount: 1,
     image: "ACETOP.jpg",
@@ -165,10 +178,11 @@ const inventaryProducts = [
     image4: "ACETOP4.jpg",
     stock: 8,
     category: "tops",
+    type: "allProducts",
     id: 14,
   },
   {
-    title: "SPEED TOP",
+    title: "Speed Top",
     price: 5390,
     amount: 1,
     image: "SPEEDTOP.jpg",
@@ -177,10 +191,11 @@ const inventaryProducts = [
     image4: "SPEEDTOP4.jpg",
     stock: 3,
     category: "tops",
+    type: "allProducts",
     id: 15,
   },
   {
-    title: "LEOPARD TOP",
+    title: "Leopard Top",
     price: 5390,
     amount: 1,
     image: "LEOPARDTOP.jpg",
@@ -189,8 +204,9 @@ const inventaryProducts = [
     image4: "LEOPARDTOP4.jpg",
     stock: 6,
     category: "tops",
+    type: "allProducts",
     id: 16,
-  }
+  },
 ];
 
 export default inventaryProducts;

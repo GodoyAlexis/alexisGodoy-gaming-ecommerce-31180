@@ -1,6 +1,6 @@
-import "./CartList.css"
+import "./CartList.css";
 import { useContext } from "react";
-import { Button, Card, Col, Row } from "react-bootstrap";
+import { Button, Col, Row } from "react-bootstrap";
 import CartContext from "../../context/CartContext";
 
 const CartList = ({ product }) => {
@@ -9,14 +9,21 @@ const CartList = ({ product }) => {
 
   return (
     <Row className="cartList d-flex align-items-center" key={product.id}>
-      <Col style={{width:"25%"}} className="mt-2">
-        <img src={`/${product.image}`} alt={`${product.title}`} style={{minWidth:"100%", maxHeight:"200px", objectFit:"contain"}} />
+      <Col style={{ width: "25%" }} className="mt-2">
+        <img
+          src={`/${product.image}`}
+          alt={`${product.title}`}
+          style={{ minWidth: "100%", maxHeight: "200px", objectFit: "contain" }}
+        />
       </Col>
-      <Col style={{width:"25%", display:"flex", flexDirection:"column" }}>
+      <Col style={{ width: "25%", display: "flex", flexDirection: "column" }}>
         <p className="info">{product.title}</p>
         <p className="info">${product.price * product.amount}</p>
       </Col>
-      <Col style={{width:"25%"}} className="d-flex align-items-center justify-content-center">
+      <Col
+        style={{ width: "25%" }}
+        className="d-flex align-items-center justify-content-center"
+      >
         <Button
           variant="default"
           className="countButton"
@@ -33,7 +40,7 @@ const CartList = ({ product }) => {
           +
         </Button>
       </Col>
-      <Col style={{width:"25%"}}>
+      <Col style={{ width: "25%" }}>
         <Button variant="light">
           <img
             src="../delete.png"

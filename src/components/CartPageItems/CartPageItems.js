@@ -19,7 +19,7 @@ const CartPageItems = () => {
       >
         Carrito de compras
       </h2>
-      <Row>
+      {quantityCart !== 0 && <Row>
         <Col className="titleCart" style={{ width: "25%" }}>
           Producto
         </Col>
@@ -32,44 +32,42 @@ const CartPageItems = () => {
         <Col className="titleCart" style={{ width: "25%" }}>
           Eliminar
         </Col>
-      </Row>
+      </Row>}
       {cartListItems.map((cartItem) => {
         return <CartList product={cartItem} />;
       })}
-      <div style={{ padding: "20px" }}>
-        {quantityCart < 1 && (
-          <>
-            <h2 style={{ padding: "20px" }}>
-              No ha seleccionado ningun producto
-            </h2>
-            <Button variant="info">
-              <Link
-                className="text-white"
-                style={{ textDecoration: "none" }}
-                to="/products/leggins"
-              >
-                Seguir comprando
-              </Link>
-            </Button>
-          </>
-        )}
-      </div>
+
+      {quantityCart < 1 && (
+        <div style={{ padding: "20px" }}>
+          <h2 style={{ padding: "20px" }}>
+            No ha seleccionado ningun producto
+          </h2>
+          <Button variant="info">
+            <Link
+              className="text-white"
+              style={{ textDecoration: "none" }}
+              to="/products/leggins"
+            >
+              Seguir comprando
+            </Link>
+          </Button>
+        </div>
+      )}
+
       {quantityCart !== 0 && (
         <>
           <div
             className="d-flex"
             style={{
               borderBottom: "1px solid #333",
-              paddingBottom: "30px",
-              paddingRight: "30px",
-              paddingLeft: "30px",
+              padding:"30px",
               fontSize: "20px",
               fontWeight: "bold",
               justifyContent: "space-between",
             }}
           >
             <p>Subtotal:</p>
-            <span>${totalPrice}</span>
+            <span>${Math.round(totalPrice)}</span>
           </div>
 
           <div
@@ -82,9 +80,11 @@ const CartPageItems = () => {
             }}
           >
             <p>Total:</p>
-            <span>${totalPrice*0.85}</span>
+            <span>${Math.round(totalPrice * 0.85)}</span>
           </div>
-          <h6 style={{textAlign:"start", marginBottom:"30px"}}>15% de descuento en la primera compra.</h6>
+          <h6 style={{ textAlign: "start", marginBottom: "30px" }}>
+            15% de descuento en la primera compra.
+          </h6>
         </>
       )}
     </Container>
