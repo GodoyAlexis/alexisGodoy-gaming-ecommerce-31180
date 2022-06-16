@@ -1,26 +1,17 @@
 import "./CartWidget.css";
-import { Button, Col, Offcanvas, Row } from "react-bootstrap";
+import { Button, Offcanvas } from "react-bootstrap";
 import CartContext from "../../context/CartContext";
-import { useContext, useEffect, useState } from "react";
-import { Card } from "react-bootstrap";
+import { useContext, useState } from "react";
+
+import CartList from "../CartList/CartList";
+import { Link } from "react-router-dom";
 
 const CartWidget = () => {
   const [show, setShow] = useState(false);
-  const [quantityCart, setQuantityCart] = useState(0);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const {
-    cartListItems,
-    removeProductToCart,
-    addProductToCart,
-    clearProductToCart,
-    clearCart,
-  } = useContext(CartContext);
-
-  useEffect(() => {
-    setQuantityCart(cartListItems.length);
-  }, [cartListItems]);
+  const { cartListItems, clearCart, quantityCart } = useContext(CartContext);
 
   return (
     <>
@@ -34,52 +25,31 @@ const CartWidget = () => {
         </Offcanvas.Header>
         <Offcanvas.Body>
           {cartListItems.map((cartItem) => {
-            return (
-              <Row className="d-flex align-items-center" key={cartItem.id}>
-                <Col md={3} className="mt-2">
-                  <Card.Img variant="top" src={`/${cartItem.image}`} />
-                </Col>
-                <Col md={4}>
-                  <p>{cartItem.title}</p>
-                </Col>
-                <Col
-                  md={3}
-                  className="d-flex align-items-center justify-content-center"
-                >
-                  <Button
-                    variant="default"
-                    className="countButton"
-                    onClick={() => removeProductToCart(cartItem)}
-                  >
-                    -
-                  </Button>
-                  <p className="m-1">{cartItem.amount}</p>
-                  <Button
-                    variant="default"
-                    className="countButton"
-                    onClick={() => addProductToCart(cartItem)}
-                  >
-                    +
-                  </Button>
-                </Col>
-                <Col md={2}>
-                  <Button variant="light">
-                    <img
-                      src="../delete.png"
-                      alt="delete"
-                      onClick={() => clearProductToCart(cartItem)}
-                    />
-                  </Button>
-                </Col>
-              </Row>
-            );
+            return <CartList product={cartItem} />;
           })}
           {quantityCart !== 0 ? (
-            <Button className="clearCart" variant="outline-secondary" onClick={() => clearCart()}>Vaciar carrito</Button>
+            <Button
+              className="clearCart"
+              variant="outline-secondary"
+              onClick={() => clearCart()}
+            >
+              Vaciar carrito
+            </Button>
           ) : (
             <h5 className="text-center">No ha seleccionado ningun producto!</h5>
           )}
         </Offcanvas.Body>
+        {quantityCart !== 0 && (
+          <Button variant="info">
+            <Link
+              className="text-white"
+              style={{ textDecoration: "none" }}
+              to="/cart"
+            >
+              Finalizar Compra
+            </Link>
+          </Button>
+        )}
       </Offcanvas>
     </>
   );

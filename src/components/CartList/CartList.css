@@ -1,0 +1,8 @@
+.cartList{
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.info{
+    font-weight: bold;
+}

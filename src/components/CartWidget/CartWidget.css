@@ -24,3 +24,7 @@ div > .countButton{
     right: 10px;
     margin-top: 10px;
 }
+
+div > .offcanvas-body{
+    padding: 5px;
+}

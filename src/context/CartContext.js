@@ -1,9 +1,23 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
   const [cartListItems, setCartListItems] = useState([]);
+  const [quantityCart, setQuantityCart] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    let totalPriceAux = 0;
+    cartListItems.forEach((product) => {
+      totalPriceAux = totalPriceAux + product.price * product.amount;
+    });
+    setTotalPrice(totalPriceAux);
+  }, [cartListItems]);
+
+  useEffect(() => {
+    setQuantityCart(cartListItems.length);
+  }, [cartListItems]);
 
   const addProductToCart = (product) => {
     const inCart = cartListItems.find(
@@ -56,6 +70,8 @@ const CartProvider = ({ children }) => {
     removeProductToCart,
     clearProductToCart,
     clearCart,
+    quantityCart,
+    totalPrice,
   };
 
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;

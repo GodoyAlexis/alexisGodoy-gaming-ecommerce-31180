@@ -7,6 +7,7 @@ import Detail from "./pages/Detail";
 import NotFound from "./pages/NotFound";
 import ProductCategory from "./pages/ProductCategory";
 import { CartProvider } from "./context/CartContext";
+import Cart from "./pages/Cart";
 
 // or less ideally
 
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/product/:id" element={<Detail />} />
             <Route path="/products/:category" element={<ProductCategory />} />
+            <Route path="/cart" element={<Cart />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

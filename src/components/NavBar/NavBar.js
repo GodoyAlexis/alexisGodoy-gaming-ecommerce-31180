@@ -1,11 +1,15 @@
 import "./NavBar.css";
-import React from "react";
+import React, { useContext } from "react";
 import { Navbar, Container, NavDropdown, Nav } from "react-bootstrap";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
+import CartContext from "../../context/CartContext";
 
 // UpperCamelCase
 const NavBar = () => {
+  const { cartListItems } =
+  useContext(CartContext);
+
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -23,9 +27,9 @@ const NavBar = () => {
               <NavDropdown.Item href="#action/3.2"><Link className="linkItem" to="/products/tops">Tops</Link></NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Nav>
+          {cartListItems.length > 0 && <Nav>
             <CartWidget className="cartWidget" />
-          </Nav>
+          </Nav>}
         </Navbar.Collapse>
       </Container>
     </Navbar>
