@@ -1,13 +1,25 @@
 import ItemList from "../components/ItemList/ItemList";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import inventaryProducts from "../utils/inventaryProducts";
 import { Spinner } from "react-bootstrap";
+import { collection, getDocs } from "firebase/firestore";
+import db from "../utils/firebaseConfig";
 
 const ProductCategory = () => {
   const { category } = useParams();
   const [loading, setLoading] = useState(false);
   const [stock, setStock] = useState([]);
+
+  const getProducts = async () => {
+    changeLoading();
+    const productSnapshot = await getDocs(collection(db, "inventaryProducts"));
+    const productList = productSnapshot.docs.map((doc) => {
+      let product = doc.data();
+      product.id = doc.id;
+      return product;
+    });
+    return productList;
+  };
 
   const changeLoading = () => {
     setLoading(true);
@@ -15,18 +27,10 @@ const ProductCategory = () => {
       setLoading(false);
     }, 2000);
   };
-  const getInventary = () => {
-    return new Promise((resolve, reject) => {
-      changeLoading();
-      setTimeout(() => {
-        resolve(inventaryProducts);
-      }, 2000);
-    });
-  };
 
   useEffect(() => {
     setStock([]);
-    getInventary()
+    getProducts()
       .then((response) => {
         filterCategory(response);
       })

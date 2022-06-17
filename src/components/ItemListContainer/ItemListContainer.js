@@ -1,12 +1,26 @@
 import "./ItemListContainer.css";
 import { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
-import inventaryProducts from "../../utils/inventaryProducts";
 import { Spinner } from "react-bootstrap";
+//Firestore
+import { collection, getDocs } from "firebase/firestore";
+import db from "../../utils/firebaseConfig";
 
 const ItemListContainer = ({ title }) => {
   const [stock, setStock] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  const getProducts = async () => {
+    changeLoading()
+    const productSnapshot = await getDocs(collection(db, "inventaryProducts"));
+    const productList = productSnapshot.docs.map((doc) => {
+      let product = doc.data();
+      product.id = doc.id;
+      console.log(product);
+      return product;
+    });
+    return productList;
+  };
 
   const changeLoading = () => {
     setLoading(true);
@@ -14,17 +28,9 @@ const ItemListContainer = ({ title }) => {
       setLoading(false);
     }, 2000);
   };
-  const getInventary = () => {
-    return new Promise((resolve, reject) => {
-      changeLoading();
-      setTimeout(() => {
-        resolve(inventaryProducts);
-      }, 2000);
-    });
-  };
 
   useEffect(() => {
-    getInventary()
+    getProducts()
       .then((response) => {
         setStock(response);
       })

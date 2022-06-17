@@ -1,7 +1,8 @@
+import { doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { Spinner } from "react-bootstrap";
 import { useParams } from "react-router-dom";
-import inventaryProducts from "../../utils/inventaryProducts";
+import db from "../../utils/firebaseConfig";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
 const ItemDetailContainer = () => {
@@ -16,21 +17,17 @@ const ItemDetailContainer = () => {
     }, 2000);
   };
 
-  const productFilter = inventaryProducts.find((product) => {
-    return product.id == id;
-  });
-
-  const getItem = () => {
-    changeLoading();
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(productFilter);
-      }, 2000);
-    });
+  const getProduct = async () => {
+    changeLoading()
+    const docRef = doc(db, "inventaryProducts", id);
+    const docSnaptshop = await getDoc(docRef);
+    let product = docSnaptshop.data();
+    product.id = docSnaptshop.id;
+    return product;
   };
 
   useEffect(() => {
-    getItem().then((res) => {
+    getProduct().then((res) => {
       setProduct(res);
     });
   }, [id]);
