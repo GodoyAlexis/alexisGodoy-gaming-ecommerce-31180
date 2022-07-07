@@ -4,6 +4,7 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import CartContext from "../../context/CartContext";
 import CartList from "../CartList/CartList";
 import { Link } from "react-router-dom";
+import ModalCart from "../ModalCart/ModalCart";
 
 const CartPageItems = () => {
   const { cartListItems, quantityCart, totalPrice } = useContext(CartContext);
@@ -85,8 +86,9 @@ const CartPageItems = () => {
           <h6 style={{ textAlign: "start", marginBottom: "30px" }}>
             15% de descuento en la primera compra.
           </h6>
+          <ModalCart/>
         </>
-      )}
+)}
     </Container>
   );
 };

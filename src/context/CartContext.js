@@ -64,7 +64,12 @@ const CartProvider = ({ children }) => {
 
   const clearCart = () => setCartListItems([]);
 
+  const cleanCartProducts = () => {
+    setCartListItems([]);
+  };
+
   const data = {
+    cleanCartProducts,
     cartListItems,
     addProductToCart,
     removeProductToCart,

@@ -72,7 +72,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 Nombre del proyecto: Style Sport.
 
-Estado del proyecto: En progreso..
+Estado del proyecto: Finalizado
 
 Librerias utilizadas: react-bootstrap.
 
@@ -82,3 +82,5 @@ Indicaciones para utilizar la app:  °En el inicio tienes un banner.
                                     °Luego puedes interactuar con el boton productos y se abrira un dropdown para que selecciones el tipo de producto que quieres ver.
                                     °Al estar cargada la lista de productos que seleccionaste puedes ver los detalles del producto que prefieras interactuando con el boton de detalles.
                                     °Tienes un contador para que selecciones la cantidad de productos que requieras.
+                                    °Luego al ser enviado al carrito de compras debes completar el formulario que se abre al interactuar con el botón "completar compra".
+                                    °Confirmas los datos y al finalizar te daran un codigo de orden de compra, para que puedas retirarlo
