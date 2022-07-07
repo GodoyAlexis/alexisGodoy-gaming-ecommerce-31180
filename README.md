@@ -76,7 +76,11 @@ Estado del proyecto: Finalizado
 
 Librerias utilizadas: react-bootstrap.
 
+Utilizado: Firebase "^9.8.3"
+
 Informacion sobre el proyecto: Somos una tienda de ropa deportiva femenina, en la cual resaltamos por la buena calidad y por la gran variedad de productos, para todos los talles.
+
+La pagina fue subida a netlify: https://62c63a1446dacf20ace5e104--dreamy-jalebi-ee47df.netlify.app/
 
 Indicaciones para utilizar la app:  °En el inicio tienes un banner.
                                     °Luego puedes interactuar con el boton productos y se abrira un dropdown para que selecciones el tipo de producto que quieres ver.
